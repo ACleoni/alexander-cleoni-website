@@ -1,7 +1,7 @@
 /* Main Styles */
 
 body {
-    font-family: 'Raleway', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 ul {
@@ -198,25 +198,41 @@ p {
     margin-right: auto;
     max-width: 380px;
     padding: 1px 1px 5px 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10em;
+    bottom: 0;
 }
 
 .aboutme {
-    background: url('../images/home-background.jpg') no-repeat;
+    background: url('../images/office3.jpeg') no-repeat;
     background-size: cover;
+}
+
+.dtls{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.dtls > img {
+    width: 40em;
+    height: 40em;
 }
 
 
 /*  Animated Chevron */
 
-.fa-chevron-down{
-    color: #87CEFA !important; 
-    bottom: 10px;
+.fa-chevron-down {
+    color: #87CEFA !important;
+    bottom: 0;
     margin-left: -30px;
     cursor: pointer;
     position: absolute;
     opacity: 0;
     -webkit-transition: 1.2s ease;
-}
+  }
 
 
 /* Scroll Down Indicator (Bounce) */
@@ -269,5 +285,24 @@ p {
 .bounce {
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite
+}
+
+
+
+
+
+
+
+
+
+/* Small Resolution Styles */
+@media Screen and (min-width: 100px) and (max-width: 500px) {
+    .fa-bars {
+        display: block !important;
+    }
+
+    .header-links {
+        display: none;
+    }
 }
 
