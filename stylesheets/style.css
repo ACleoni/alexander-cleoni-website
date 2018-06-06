@@ -108,6 +108,32 @@ h1 {
     color: #fff;
 }
 
+.icon i {
+    font-size: 90px;
+}
+
+.icon-img {
+    height: 90px;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+    color: #000;
+}
+
+.all-skills {
+    display: flex; justify-content: space-around; flex-wrap: wrap;
+}
+
+#container {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (min-width: 768px) {
     .main-nav {
         /* Reset Style */
@@ -190,12 +216,12 @@ h1 {
 
 .fixed-bg.fixed-bg--1 {
     background-image: url("../images/main.jpg");
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
 }
 
 .fixed-bg.fixed-bg--2 {
-    background-image: url("../images/atlanta.jpeg");
+    background-image: url("../images/background-2.jpg");
 }
 
 @media only screen and (min-width: 768px) {
@@ -223,8 +249,6 @@ h1 {
     min-height: 100%;
     padding: 4em 0;
     line-height: 1.6;
-    /* -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); */
     z-index: 2;
 }
 
