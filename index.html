@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/devices.min.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/style.css">
     <title>Alexander Cleoni</title>
 </head>
@@ -41,11 +39,12 @@
 
         <div class="scrolling-bg scrolling-bg--color">
             <div class="me-img-holder">
-                <img class="me" src="images/me.jpg">
+                <!-- <img class="me" src="images/me.jpg"> -->
             </div>
-            <h2>About Me</h2>
+            
             <div class="scrolling-bg--content">
-                <p>
+                    <h2 id="about">About Me</h2>
+                <p class="about">
                     Hi, I'm Alexander and I'm a Full Stack Software Developer with a strong passion for creating Web and Mobile Apps. 
                     Before I became a developer, I was a Sales and Operations Manager in the retail industry. I've always had a knack for 
                     solving problems and taking on big challenges. This, along with my innovative creativity led me to explore software development as a career and lifestyle.<br><br>
@@ -61,31 +60,98 @@
 
         <div class='scrolling-bg scrolling-bg-2 scrolling-bg--color'>
             <h2>Projects</h2>
+            <h3 class="web-hovr">Hover over an image for project details</h3>
             <div class="scrolling-bg--content-2">
-                <section class="project">
+
+                <section class="project project-1">
+                    <span>
                         <div class="iphone-x">
-                                <div class="divider"></div>
-                                <div class="bezel"></div>
-                                <div class="screen"><img src="images/screen.png" style="height: 100%;"></div>
-                                <div class="speaker"></div>
-                                <div class="camera"></div>
-                                <div class="button mute"></div>
-                                <div class="button vol-up"></div>
-                                <div class="button vol-down"></div>
-                                <div class="button right"></div>
-                                <div class="divider"></div>
-                              </div>
-                              <div>
-                                  <h3>EventScene</h3>
-                                    <p>EventScene is a React Native app deployable to IOS and Android Platforms. EventScene helps tourists and locals alike
-                                        track events/venues in their immediate area through the use of Google Maps, thus being more visually friendly and interactive than most other event apps. EventScene tracks the users location and constantly updates 
-                                        their coordinates as they drag their finger across the map. A simple tap of the screen will enable multiple markers within a five mile radius to pop up on the map with details of each event/venue. More advanced features
-                                        include filtering different types of events, saving a URL to the users profile, opening a URL for tickets and additional info, and embedding the users uber account into the app to catch a ride to the next event in their area. 
-                                    </p>
-                                    <i class="devicon-github-plain colored"></i>
-                              </div>
+                            <div class="divider"></div>
+                            <div class="bezel"></div>
+                            <div class="screen"><img src="images/screen.png" style="width: 100%">
+                                <p class="hover">EventScene is an interactive, user-friendly React Native app that tracks a users location and utilizes Google Maps to pin point 
+                                        marker positions of events and venues within a set radius. Advanced features include filtering different types of events, saving a URL to the users profile, 
+                                        opening a URL for tickets and additional info, and embedding the users uber account into the app to catch a ride to the next event in their area. 
+                                </p>
+                            </div>
+                            <div class="speaker"></div>
+                            <div class="camera"></div>
+                            <div class="button mute"></div>
+                            <div class="button vol-up"></div>
+                            <div class="button vol-down"></div>
+                            <div class="button right"></div>
+                            <div class="divider"></div>
+                        </div>
+                    </span>
+                    <span class="span-overlay">
+                        <h3>EventScene</h3>
+                        <p>EventScene is an interactive, user-friendly React Native app that tracks a users location and utilizes Google Maps to pin point 
+                                marker positions of events and venues within a set radius. Advanced features include filtering different types of events, saving a URL to the users profile, 
+                                opening a URL for tickets and additional info, and embedding the users uber account into the app to catch a ride to the next event in their area. 
+                        </p>
+                        <a class="devicon-github-plain colored" style="font-size: 50px"></a>
+                    </span>
                 </section>
-            </div>
+
+                <section class="project project-2">
+                    <span>
+                        <div class="css-mb with-glare">
+                            <div class="mb-display-position">
+                                <div class="mb-display">
+                                <div class="mb-screen-position">
+                                    <div class="mb-screen">
+                                        <img src="images/mysitter.jpg" style="width: 100%" alt="mySitter image" />
+                                        <p class="hover">The mySitter app is a mobile web app that connects parents with babysitters though validated
+                                            socail media profiles such as Facebook and Linkedin. Parents simply set filters to meet their needs and swipe left or right
+                                            on the main screen in a tinder-like fashion to find the perfect baby sitter match. 
+                                        </p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="mb-body"></div>
+                            <div class="mb-bottom-cover"></div>
+                        </div>
+                    </span>
+                    <span class="span-overlay">
+                        <h3>mySitter</h3>
+                        <p class="hover">The mySitter app is a mobile web app that connects parents with babysitters though validated
+                                social media profiles such as Facebook and Linkedin. Parents simply set filters to meet their needs and swipe left or right
+                                on the main screen in a tinder-like fashion to find the perfect baby sitter match. 
+                        </p>
+                        <a class="devicon-github-plain colored" style="font-size: 50px"></a>
+                    </span>
+                </section>
+
+                <section class="project project-3">
+                    <span>
+                        <div class="css-mb with-glare">
+                            <div class="mb-display-position">
+                                <div class="mb-display">
+                                <div class="mb-screen-position">
+                                    <div class="mb-screen">
+                                        <img src="images/packagetracker.jpg" style="width: 100%" alt="packagetracker image" />
+                                        <p class="hover">The Package Tracker app allows individuals to enter a valid package tracking number from UPS or Fedex. The app will then return a label with the deliver status. The app will also render a map from Google
+                                                with markers of each point the package has passed through. The markers hold specific details regarding the package while it was at a certain stopping point.  
+                                        </p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="mb-body"></div>
+                            <div class="mb-bottom-cover"></div>
+                        </div>
+                    </span>
+                    <span class="span-overlay">
+                        <h3>Package Tracker</h3>
+                        <p>The Package Tracker app allows individuals to enter a valid package tracking number from UPS or Fedex. The app will then return a label with the deliver status. The app will also render a map from Google
+                            with markers of each point the package has passed through. The markers hold specific details regarding the package while it was at a certain stopping point.  
+                        </p>
+                        <i class="devicon-github-plain colored"></i>
+                    </span>
+                </section>
+                
+            </div> 
         </div>
 
         <div class="scrolling-bg scrolling-bg--color">
@@ -238,9 +304,11 @@
             </div>   -->
         </div>
     </main>
-    
-    <script src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/wow.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="javascripts/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <!-- <script src="javascripts/main.js"></script> -->
+
 </body>
 </html>
