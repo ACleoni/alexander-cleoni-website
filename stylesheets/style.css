@@ -44,10 +44,14 @@ a {
 
 ul {
   list-style-type: none;  
+  margin: 0;
 }
 
 h3 {
     color: #3d3536;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
@@ -56,6 +60,12 @@ p {
 
 h1 small {
     color: white;
+}
+
+.form-container h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -90,8 +100,12 @@ h1 small {
     display: block
 }
 
+#github-link {
+    padding: 0 0 0 .2em;
+}
 
-@media only screen and (min-width: 768px) {
+
+@media only screen and (min-width: 769px) {
     .main-header {
         height: 44px;
         display: flex;
@@ -183,7 +197,7 @@ h1 small {
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     .main-nav {
         /* Reset Style */
         width: auto;
@@ -285,123 +299,89 @@ h1 small {
 }
 
 .fixed-bg.fixed-bg--2 {
-    background-image: url("../images/typing.jpg");
+    background-image: url("../images/leavemessage.jpeg");
     background-size: cover;
     background-position: center center;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 8em 0 0 0;
+    align-items: center;
+    padding: 4em 0 0 0;
 }
 
 
 /* Form */
-form {
-    margin: 0 0 2rem 0;
-}
-
-.form-header{
-    font-size: 2.25rem;
-    font-weight: 300;
-    line-height: 1.375;
-    letter-spacing: -0.05em;
-    margin: 0 0 1rem 0;
-}
-
-.form-group {
-    width: 40em;
-    padding: 30px;
-    margin: 0 auto;
-}
-
-.form-group div {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.form-group div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-   
-}
-
-.form-group div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    /* min-height: 35px; */
-}
-
-input, textarea {
-    padding: 8px;
-    font-size: 1.5rem;
-    font-weight: 300;
-    outline: none;
-    border: 1px solid #D3D3D3;
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1.75rem;
+    resize: vertical;
     background: transparent;
-    -webkit-transition: all 0.30s ease-in-out;
-        -ms-transition: all 0.30s ease-in-out;
-            transition: all 0.30s ease-in-out;
+    color: #000;
 }
 
 label {
-display: block;
-    font-size: 0.9rem;
+    display: inline-block;
+    padding: 12px 12px 12px 0;
+    color: #000;
+}
+
+input[type=submit] {
+    border: 1px solid;
+    color: #000;
+    cursor: pointer;
+    background-color: transparent;
+    display: inline-block;
     font-weight: 400;
-    margin: 0 0 1rem 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: .75rem;
+    max-width: 20rem;
+    height: 3.75em;
+    line-height: 3.75em;
+    border-radius: 3.75em;
+    padding: 0 2.5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 10px auto;
 }
 
-input {
-    width: 100%
+.form-container {
+    padding: 20px;
+    width: 600px;
 }
 
-textarea {
-    width: 100%;
-    height: 200px;
-}
-
-.field-style {
-    min-height: 50px;
-}
-
-.field-message {
-    height: 200px !important;
-}
-
-.field-style:focus{
-    box-shadow: 0 0 5px #C0C0C0;
-    border: 1px solid #D3D3D3;
-}
-
-.field-split {
+.col-25 {
+    float: left;
     width: 50%;
-    clear: none;
-    margin: 0 0 1.5rem 0;
+    margin: 6px auto;
 }
 
-.align-left{
-    float:left;
-    padding-right: 0.75rem;
-    clear: none;
-    
-}
-.align-right{
-    float:right;
-    padding-left: 0.75rem;
-    clear: none
-}
-.bottom {
+.col-75 {
+    float: left;
     width: 100%;
-    height: 100px;
-    line-height: 1.65;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
     clear: both;
 }
 
-button {
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* button {
     border: 1px solid;
     cursor: pointer;
     background-color: transparent;
@@ -419,7 +399,7 @@ button {
     padding: 0 2.5em;
     text-overflow: ellipsis;
     overflow: hidden;
-}
+} */
 
 /* Icon */
 .icons {
@@ -488,7 +468,7 @@ a.icon.style2:active:before {
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     .fixed-bg h1, .fixed-bg h2 {
       font-size: 3.6rem;
     }
@@ -504,6 +484,7 @@ a.icon.style2:active:before {
     }
     .about {
         width: 50%;
+        font-size: 1.3em; 
     }
     .scrolling-bg--content {
         display: flex;
@@ -516,7 +497,8 @@ a.icon.style2:active:before {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        flex-wrap: nowrap
+        flex-wrap: wrap;
+
         /* margin: 0 15em 0 15em; */
     }
 
@@ -536,17 +518,22 @@ a.icon.style2:active:before {
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        right: -150px;
-        width: 50%;
+        right: 0;
+        overflow: hidden;
+        width: 45%;
         height: 100%;
         margin: 0 auto;
         justify-content: flex-end;
     }
     
+    .me {
+        display: none;
+    }
     
 
     .project {
         display: flex;
+        width: 50%;
         height: 50em ;
         justify-content: space-around;
         flex-direction: row-reverse;
@@ -584,18 +571,41 @@ a.icon.style2:active:before {
         /* background-color: #008CBA; */
       }
       
-      .project:hover .hover {
+      .screen:hover .hover {
         opacity: 1;
         overflow: scroll;
         color: whitesmoke;
         font-size: 1.1em;
+        padding: .1em;
         display: flex;
         align-items: center;
       }
 
-      .project:hover img {
+      .screen:hover img {
           opacity: 0;
       }
+
+      .mb-display:hover .hover {
+        opacity: 1;
+        overflow: scroll;
+        color: whitesmoke;
+        font-size: 1.1em;
+        padding: .1em;
+        display: flex;
+        align-items: center;
+      }
+
+      .mb-display:hover img {
+          opacity: 0;
+      }
+
+      .sbg1 {
+        padding-top: 0 !important;
+      }
+
+      .sbg2 {
+          padding-bottom: 0 !important;
+    }
     
 }
 
@@ -607,11 +617,11 @@ a.icon.style2:active:before {
     }
 
     h1 small {
-        padding: 0 0 0 .5em;
+        padding: 0 0 0 .2em;
     }
 
     h1 {
-        margin: 0 0 0 2em;
+        margin: 0 0 0 .1em;
     }
 
     @supports (background-attachment: fixed) {
@@ -675,7 +685,7 @@ a.icon.style2:active:before {
 
 /* MOBILE FRIENDLY */
 
-@media only screen and (min-width: 320px) and (max-width: 414px) {
+@media only screen and (min-width: 320px) and (max-width: 769px) {
 
     section {
         padding: 0 0 1em 0;
@@ -684,6 +694,7 @@ a.icon.style2:active:before {
     .label {
         font-size: 100%;
     }
+
     
     .scrolling-bg--content {
         display: flex;
@@ -706,6 +717,16 @@ a.icon.style2:active:before {
         padding: 1.7em;
     }
 
+    .project {
+        margin: 0 0 3em 0;
+        padding: 0;
+    }
+
+    #github-link {
+        display: flex;
+        justify-content: center;
+    }
+
     h1 {
         font-size: 1.5em;
         display: flex;
@@ -713,6 +734,8 @@ a.icon.style2:active:before {
         color: white;
         justify-content: space-around;
     }
+
+    
 
 
     .main-nav {
@@ -763,13 +786,27 @@ a.icon.style2:active:before {
     }
 }
 
+@media only screen and (min-width: 360px) and (max-width: 769px) {
+    h1 {margin: 2.5em 0 0 0;}
+}
+
+@media only screen and (min-width: 1450px) {
+    .me-img-holder {
+        right: 0;
+    }
+    .about {
+        font-size: 1.6em; 
+    }
+}
+
+
 
 /* IPHONE MOCKUP */
 .iphone-x {
     height: 724px;
     width: 357px;
     background-image: linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 1%, rgba(0, 0, 0, 1) 2%, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 95%, rgba(0, 0, 0, 1) 98%, rgba(255, 255, 255, 1) 99%, rgba(255, 255, 255, 1) 100%);
-    margin: 2em 0 2em 0;
+    margin: .2em 0 2em 0;
     border-radius: 55px;
     box-sizing: border-box;
     border: 2px solid black;
@@ -901,18 +938,18 @@ a.icon.style2:active:before {
     min-width: 60px; /* Set the desired minimum width of the macbook */
     margin: 0 0 2em 0
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 769px) {
     .css-mb {
-        max-width: 500px; /* Set the desired maximum width of the macbook */
-        min-width: 500px; /* Set the desired minimum width of the macbook */
+        max-width: 650px; /* Set the desired maximum width of the macbook */
+        min-width: 650px; /* Set the desired minimum width of the macbook */
         margin: 150px auto 0; /*  Align mockup to center */
     }
 }
 
 @media only screen and (min-width: 1450px) {
     .css-mb {
-        max-width: 650px; /* Set the desired maximum width of the macbook */
-        min-width: 650px; /* Set the desired minimum width of the macbook */
+        max-width: 768px; /* Set the desired maximum width of the macbook */
+        min-width: 768px; /* Set the desired minimum width of the macbook */
         margin: 150px auto 0; /*  Align mockup to center */
     }
 }
