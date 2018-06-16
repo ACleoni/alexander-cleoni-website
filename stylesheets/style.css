@@ -69,6 +69,21 @@ h1 small {
 }
 
 
+.menu-icon, .menu-btn {
+    visibility: hidden;
+}
+
+
+.coming-soon {
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    color: white;
+    align-items: center;
+    height: 70px
+}
 
 
 /* Fixed and Scroll Backgrounds */
@@ -261,6 +276,14 @@ h1 small {
         /* text-transform: lowercase; */
         font-size: 0.7em;
     }
+
+    .copyright {
+        font-size: 1.35em;
+        position: absolute;
+        bottom: 0;
+        align-self: center;
+        font-weight: 300;
+    }
 }
 
 
@@ -315,16 +338,21 @@ input[type=text], select, textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1.75rem;
+    font-size: 1.25em;
+    font-weight: 300;
     resize: vertical;
     background: transparent;
     color: #000;
+    -webkit-appearance: none;
+            appearance: none;
 }
 
 label {
     display: inline-block;
     padding: 12px 12px 12px 0;
     color: #000;
+    font-weight: 300;
+    font-size: 1.25em
 }
 
 input[type=submit] {
@@ -346,7 +374,12 @@ input[type=submit] {
     padding: 0 2.5em;
     text-overflow: ellipsis;
     overflow: hidden;
-    margin: 10px auto;
+    margin: .5em 0 0 0;
+}
+
+input[type=submit]:hover {
+    border-color: #3d3536;
+    color: #3d3536
 }
 
 .form-container {
@@ -371,6 +404,23 @@ input[type=submit] {
     content: "";
     display: table;
     clear: both;
+}
+
+.bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+
+}
+
+#links {
+    margin: 0 0 0 1em;
+    font-size: 1.75em;
+}
+
+.links a {
+    color: black;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
@@ -570,6 +620,7 @@ a.icon.style2:active:before {
         /* transition: .1s ease; */
         /* background-color: #008CBA; */
       }
+
       
       .screen:hover .hover {
         opacity: 1;
@@ -584,6 +635,7 @@ a.icon.style2:active:before {
       .screen:hover img {
           opacity: 0;
       }
+
 
       .mb-display:hover .hover {
         opacity: 1;
@@ -691,8 +743,22 @@ a.icon.style2:active:before {
         padding: 0 0 1em 0;
     }
 
+    .hover-special {
+        display: none;
+    }
+
     .label {
         font-size: 100%;
+    }
+
+    .copyright {
+        font-size: 1.25em;
+        align-self: flex-end;
+        position: absolute;
+        /* height: 25px; */
+        display: flex;
+        align-items: center;
+        padding: 1em 0 0 0 ;
     }
 
     
@@ -736,6 +802,9 @@ a.icon.style2:active:before {
     }
 
     
+    .bottom-row {
+        padding: 15px;
+    }
 
 
     .main-nav {
@@ -784,7 +853,110 @@ a.icon.style2:active:before {
     .span-overlay {
         opacity: 1
     }
+
+    .main-nav-list {
+        position: absolute;
+        top: -20em;
+        width: 100%;
+        margin: 15.5em 0 0 0;
+        background: #000000c9;
+        height: 200px;
+        transition: .4s ease
+    }
+    
+    .visible {
+        -webkit-transform: translateY(7.6em);
+            -ms-transform: translateY(7.6em);
+                transform: translateY(7.6em);
+    }
+    
+    .main-nav-list a {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        padding-left: 5%;
+        color: #fff;
+    }
+
+
+    /* Menu */
+    .main-header .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+
+    /* Menu Icon*/
+    .menu-icon, .menu-btn {
+        visibility: visible;
+    }
+
+    .main-header .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+      
+    .main-header .menu-icon .navicon {
+        background: white;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+      
+    .main-header .menu-icon .navicon:before,
+    .main-header .menu-icon .navicon:after {
+        background: white;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+      
+    .main-header .menu-icon .navicon:before {
+        top: 5px;
+    }
+    
+    .main-header .menu-icon .navicon:after {
+        top: -5px;
+    }
+
+    /* menu btn */
+
+    .main-header .menu-btn {
+        display: none;
+    }
+
+    .main-header .menu-btn:checked ~ .menu {
+        max-height: 240px;
+    }
+    
+    .main-header .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+    
+    .main-header .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+    
+    .main-header .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+    
+    .main-header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .main-header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+    
 }
+
 
 @media only screen and (min-width: 360px) and (max-width: 769px) {
     h1 {margin: 2.5em 0 0 0;}
@@ -1102,15 +1274,4 @@ a.icon.style2:active:before {
     -webkit-border-bottom-right-radius: 12% 600%;
         -moz-border-radius-bottomtight: 12% 600%;
             border-bottom-right-radius: 12% 600%; 
-  }
-
-
-
-
-
-
-
-
-
-
-
+    }

@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="stylesheets/style.css">
     <title>Alexander Cleoni</title>
 </head>
 <body>
     
     <header class="main-header">
-
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <nav class="main-nav js-main-nav">
             <ul class="main-nav-list">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#0">Contact</a></li>
+                <li><a class="nav" href="#about">About Me</a></li>
+                <li><a class="nav" href="#projects">Projects</a></li>
+                <li><a class="nav" href="#skills">Skills</a></li>
+                <li><a class="nav" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -96,71 +96,39 @@
                     </span>
                 </section>
                 <section class="project project-1">
-                        <span>
-                            <h3>mySitter
-                                <a class="devicon-github-plain colored" id="github-link" style="font-size: 40px" href="https://github.com/ACleoni/EventScene"></a>
-                            </h3>
-                            <div class="iphone-x">
-                                <div class="divider"></div>
-                                <div class="bezel"></div>
-                                <div class="screen"><img src="images/mySitter.png" style="width: 100%">
-                                    <p class="hover">EventScene is an interactive, user-friendly React Native app that tracks a users location and utilizes Google Maps to pin point 
-                                            marker positions of events and venues within a set radius. Advanced features include filtering different types of events, saving a URL to the users profile, 
-                                            opening a URL for tickets and additional info, and embedding the users uber account into the app to catch a ride to the next event in their area. 
-                                    </p>
-                                </div>
-                                <div class="speaker"></div>
-                                <div class="camera"></div>
-                                <div class="button mute"></div>
-                                <div class="button vol-up"></div>
-                                <div class="button vol-down"></div>
-                                <div class="button right"></div>
-                                <div class="divider"></div>
-                            </div>
-                        </span>
-                        <span class="span-overlay">
-                            <!-- <h2>EventScene</h2> -->
-                            <p>EventScene is an interactive, user-friendly React Native app that tracks a users location and utilizes Google Maps to pin point 
-                                    marker positions of events and venues within a set radius. Advanced features include filtering different types of events, saving a URL to the users profile, 
-                                    opening a URL for tickets and additional info, and embedding the users uber account into the app to catch a ride to the next event in their area. 
-                            </p>
-                            <!-- <a class="devicon-github-plain colored" id="github-link" style="font-size: 50px" href="https://github.com/ACleoni/EventScene"></a> -->
-                        </span>
-                    </section>
-
-                <section class="project project-2">
                     <span>
-                        <div class="css-mb with-glare">
-                                <h3>Adventure Island
-                                    <a class="devicon-github-plain colored" style="font-size: 40px" id="github-link" href="https://github.com/ebates92/babysitter-app"></a>
-                                </h3>
-                            <div class="mb-display-position">
-                                <div class="mb-display">
-                                <div class="mb-screen-position">
-                                    <div class="mb-screen">
-                                        <img src="images/mysitter.jpg" style="width: 100%" alt="mySitter image" />
-                                        <p class="hover">The mySitter app is a web app that connects parents with babysitters though validated
-                                            socail media profiles such as Facebook and Linkedin. Parents simply set filters to meet their needs and swipe left or right
-                                            on the main screen in a tinder-like fashion to find the perfect baby sitter match. 
-                                        </p>
-                                    </div>
-                                </div>
-                                </div>
+                        <h3>mySitter
+                            <a class="devicon-github-plain colored" id="github-link" style="font-size: 40px" href="https://github.com/ACleoni/EventScene"></a>
+                        </h3>
+                        <div class="iphone-x">
+                            <div class="divider"></div>
+                            <div class="bezel"></div>
+                            <div class="screen"><img src="images/mySitter.png" style="width: 100%">
+                                <p class="hover">The mySitter app is a mobile web app that connects parents with babysitters though validated
+                                        social media profiles such as Facebook and Linkedin. Parents simply set filters to meet their needs and swipe left or right
+                                        on the main screen in a tinder-like fashion to find the perfect baby sitter match. Likewise, those who register as babysitters also
+                                        have the freedom to personalize their profile and set various filters to accomodate their needs.
+                                </p>
                             </div>
-                            <div class="mb-body"></div>
-                            <div class="mb-bottom-cover"></div>
+                            <div class="speaker"></div>
+                            <div class="camera"></div>
+                            <div class="button mute"></div>
+                            <div class="button vol-up"></div>
+                            <div class="button vol-down"></div>
+                            <div class="button right"></div>
+                            <div class="divider"></div>
                         </div>
                     </span>
                     <span class="span-overlay">
-                        <!-- <h3>mySitter</h3> -->
-                        <p class="hover">The mySitter app is a web app that connects parents with babysitters though validated
+                        <!-- <h2>EventScene</h2> -->
+                        <p>The mySitter app is a mobile web app that connects parents with babysitters though validated
                                 social media profiles such as Facebook and Linkedin. Parents simply set filters to meet their needs and swipe left or right
-                                on the main screen in a tinder-like fashion to find the perfect baby sitter match. 
+                                on the main screen in a tinder-like fashion to find the perfect baby sitter match. Likewise, those who register as babysitters also
+                                have the freedom to personalize their profile and set various filters to accomodate their needs.
                         </p>
-                        <!-- <a class="devicon-github-plain colored" style="font-size: 50px" id="github-link" href="https://github.com/ebates92/babysitter-app"></a> -->
+                        <!-- <a class="devicon-github-plain colored" id="github-link" style="font-size: 50px" href="https://github.com/ACleoni/EventScene"></a> -->
                     </span>
                 </section>
-
                 <section class="project project-3">
                     <span>
                         <div class="css-mb with-glare">
@@ -191,7 +159,39 @@
                         <!-- <a class="devicon-github-plain colored" id="github-link" style="font-size: 50px" href="https://github.com/s-zimm/Package-Track-Map"></a> -->
                     </span>
                 </section>
-                
+
+                <section class="project project-2">
+                    <span>
+                        <div class="css-mb with-glare">
+                                <h3>My Chat Space
+                                    <a class="devicon-github-plain colored" style="font-size: 40px" id="github-link" href="https://github.com/ACleoni/electron-chat-app"></a>
+                                </h3>
+                            <div class="mb-display-position">
+                                <div class="mb-display">
+                                <div class="mb-screen-position">
+                                    <div class="mb-screen">
+                                        <span class="coming-soon">Coming Soon!</span>
+                                        <p class="hover hover-special">My Chat Space is an Electron-based desktop chat app. My Chat Space links your social media account and allows 
+                                            friends to create rooms with different social media topics for everyone to chat about. My chat app also supports voice chat through
+                                            Agora.io, allowing full social enagement.  
+                                        </p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="mb-body"></div>
+                            <div class="mb-bottom-cover"></div>
+                        </div>
+                    </span>
+                    <span class="span-overlay">
+                        <!-- <h3>mySitter</h3> -->
+                        <p>My Chat Space is an Electron-based desktop chat app. My Chat Space links your social media account and allows 
+                                friends to create rooms with different social media topics for everyone to chat about. My chat app also supports voice chat through
+                                Agora.io, allowing full social enagement. 
+                        </p>
+                        <!-- <a class="devicon-github-plain colored" style="font-size: 50px" id="github-link" href="https://github.com/ebates92/babysitter-app"></a> -->
+                    </span>
+                </section>
             </div> 
         </div>
 
@@ -302,7 +302,7 @@
         
         <div class="fixed-bg fixed-bg--2">
             <div class="form-container">
-                    <h1>Get in touch</h1>
+                    <h1 id="contact">Get in touch</h1>
                 <form action="#" type="POST">
                     <div class="row">
                         <div class="col-25">
@@ -328,17 +328,27 @@
                             <textarea id="message" name="message" style="height: 200px" placeholder="Please write a brief message. I'm exited to hear from you!"></textarea>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row bottom-row">
                         <input type="submit" value="submit">
+                        <span class="links"><a href="https://github.com/ACleoni" class="fa fa-github" id="links"></a></span>
+                        <span class="links"><a href="https://linkedin.com/in/alexandercleoni" class="fa fa-linkedin" id="links"></a></span>
                     </div>
                 </form>
             </div>
+            <!-- <div class="copyright">&#9400; 2018 Alexander Cleoni | Made with &hearts; </div> -->
+            <!-- <footer style="display: flex; justify-content: center; background-color: white; border: none "> -->
+            
+                <!-- </footer> -->
         </div>
+        
     </main>
+    
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
     <script src="javascripts/main.js"></script>
 
 </body>
