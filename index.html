@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
@@ -49,8 +56,8 @@
                     Before I became a developer, I was a Sales and Operations Manager in the retail industry. I've always had a knack for 
                     solving problems and taking on big challenges. This, along with my innovative creativity led me to explore software development as a career and lifestyle.<br><br>
                     I discovered DigitalCrafts Coding BootCamp located in Atlanta Tech Village and was accepted into their November 2017 Cohort. 
-                    The knowlegde I've gained from DigitalCrafts has become invaluable to me as a developer. I've been able focus my time on sharpening the skills I've learned during the program as well
-                    as learn new technoliges to stay current in the ever growing tech industry.
+                    The knowledge I've gained from DigitalCrafts has become invaluable to me as a developer. I've been able focus my time on sharpening the skills I've learned during the program as well
+                    as learn new technologies to stay current in the ever growing tech industry.
                 </p> 
                 <span class="img-holder">
                     
@@ -173,7 +180,7 @@
                                         <span class="coming-soon">Coming Soon!</span>
                                         <p class="hover hover-special">My Chat Space is an Electron-based desktop chat app. My Chat Space links your social media account and allows 
                                             friends to create rooms with different social media topics for everyone to chat about. My chat app also supports voice chat through
-                                            Agora.io, allowing full social enagement.  
+                                            Agora.io, allowing full social engagement.  
                                         </p>
                                     </div>
                                 </div>
@@ -302,14 +309,15 @@
         
         <div class="fixed-bg fixed-bg--2">
             <div class="form-container">
-                    <h1 id="contact">Get in touch</h1>
-                <form action="#" type="POST">
+                <h1 id="contact">Get in touch</h1>
+                <div id="form-messages"></div>
+                <form id="ajax-form" action="mailer.php" type="POST">
                     <div class="row">
                         <div class="col-25">
                             <label for="fname">Your Name</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" id="fname" name="fname">
+                            <input type="text" id="name" name="name">
                         </div>
                     </div>
                     <div class="row">
@@ -329,9 +337,10 @@
                         </div>
                     </div>
                     <div class="row bottom-row">
-                        <input type="submit" value="submit">
+                        <input type="submit">
                         <span class="links"><a href="https://github.com/ACleoni" class="fa fa-github" id="links"></a></span>
                         <span class="links"><a href="https://linkedin.com/in/alexandercleoni" class="fa fa-linkedin" id="links"></a></span>
+                        <span class="links"><a href="images/Resume.pdf" class="fa fa-file" id="links"></a></span>
                     </div>
                 </form>
             </div>
@@ -344,11 +353,7 @@
     </main>
     
 
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-    </script>
+    <script src="javascripts/jquery.min.js"></script>
     <script src="javascripts/main.js"></script>
 
 </body>

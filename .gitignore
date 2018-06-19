@@ -1,5 +1,6 @@
 # misc
 .DS_Store
+node_modules
 
 # private_key
 alexandercleoni.pem
