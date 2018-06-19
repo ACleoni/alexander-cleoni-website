@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // route setup
 app.use('/', index);
-// app.use('/', mailer);
+app.use('/', mailer);
 
 
 // catch 404 and forward to error handler

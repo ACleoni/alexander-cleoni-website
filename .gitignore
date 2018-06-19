@@ -2,5 +2,5 @@
 .DS_Store
 node_modules
 
-# private_key
-alexandercleoni.pem
+# private
+private/
